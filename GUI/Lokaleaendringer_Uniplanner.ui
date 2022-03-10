@@ -220,6 +220,19 @@ font: 13pt &quot;Arial&quot;;</string>
      <string>Vælg kursus for ændringer/skift af lokale:</string>
     </property>
    </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>470</y>
+      <width>481</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Din anmodning vil blive godkendt snarest</string>
+    </property>
+   </widget>
    <zorder>label_2</zorder>
    <zorder>pushButton</zorder>
    <zorder>pushButton_2</zorder>
@@ -229,6 +242,7 @@ font: 13pt &quot;Arial&quot;;</string>
    <zorder>Godkend_aendring</zorder>
    <zorder>comboBox</zorder>
    <zorder>label</zorder>
+   <zorder>label_3</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
