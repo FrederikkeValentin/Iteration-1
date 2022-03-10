@@ -25,10 +25,10 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
         self.setLayout(layout)
         self.setWindowTitle("UniPlanner Hovedmenu")
 
-        #Knappen for: tilgængelighed
+        #Knappen for: Tilgængelighed
         self.Tilgaengelighed.clicked.connect(self.Tilgaengelighed_tryk)
 
-        #Knappen for: ændringer/skift af lokale
+        #Knappen for: Ændringer/skift af lokale
         self.Lokale_aendringer_skift.clicked.connect(self.Lokale_aendringer_skift_tryk)
 
         #Knappen for: Næste uge af skemaet
