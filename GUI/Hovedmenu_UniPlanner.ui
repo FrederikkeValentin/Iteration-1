@@ -64,7 +64,7 @@
      <rect>
       <x>20</x>
       <y>90</y>
-      <width>141</width>
+      <width>151</width>
       <height>21</height>
      </rect>
     </property>
@@ -381,8 +381,8 @@ font: 13pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="LogUd">
     <property name="geometry">
      <rect>
-      <x>560</x>
-      <y>90</y>
+      <x>540</x>
+      <y>30</y>
       <width>61</width>
       <height>21</height>
      </rect>
@@ -422,9 +422,9 @@ border-radius:10px;</string>
    <widget class="QPushButton" name="Lokale_aendringer_skift">
     <property name="geometry">
      <rect>
-      <x>320</x>
+      <x>370</x>
       <y>90</y>
-      <width>231</width>
+      <width>251</width>
       <height>21</height>
      </rect>
     </property>
@@ -443,9 +443,9 @@ font: 13pt &quot;Arial&quot;;</string>
    <widget class="QPushButton" name="Tilgaengelighed">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>190</x>
       <y>90</y>
-      <width>141</width>
+      <width>161</width>
       <height>21</height>
      </rect>
     </property>
