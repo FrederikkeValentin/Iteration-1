@@ -14,7 +14,7 @@
    <string>UniPlanner</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="Flyt_til_hoejre">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -33,7 +33,7 @@ border-radius:10px;</string>
      <string>&gt;</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="Flyt_til_venstre">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -52,7 +52,7 @@ border-radius:10px;</string>
      <string>&lt;</string>
     </property>
    </widget>
-   <widget class="QListWidget" name="listWidget">
+   <widget class="QListWidget" name="NuvaerendeLokale">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -77,7 +77,7 @@ border-radius:10px;</string>
      </property>
     </item>
    </widget>
-   <widget class="QListWidget" name="listWidget_2">
+   <widget class="QListWidget" name="LedigeLokaler">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -127,7 +127,7 @@ border-radius:10px;</string>
      </property>
     </item>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="Banner">
     <property name="geometry">
      <rect>
       <x>-30</x>
@@ -193,7 +193,7 @@ font: 13pt &quot;Arial&quot;;
      <string>Send anmodning</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QComboBox" name="Valg_af_kursus_menu">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -214,7 +214,7 @@ font: 13pt &quot;Arial&quot;;</string>
      </property>
     </item>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="Valg_af_kursus_tekst">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -230,20 +230,20 @@ font: 13pt &quot;Arial&quot;;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Vælg kursus for ændringer/skift af lokale:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="Informations_tekst2">
     <property name="geometry">
      <rect>
-      <x>170</x>
+      <x>0</x>
       <y>470</y>
-      <width>491</width>
+      <width>551</width>
       <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>Din anmodning vil blive godkendt snarest</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Din anmodning vil blive godkendt snarest: Afvent for notifikaiton&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox_2">
+   <widget class="QComboBox" name="Valg_ad_dato_menu">
     <property name="geometry">
      <rect>
       <x>180</x>
@@ -264,7 +264,7 @@ font: 13pt &quot;Arial&quot;;</string>
      </property>
     </item>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="Valg_af_dato_tekst">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -280,7 +280,7 @@ font: 13pt &quot;Arial&quot;;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Vælg dato:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="Informations_tekst">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -293,19 +293,40 @@ font: 13pt &quot;Arial&quot;;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Brug pilene til at skifte mellem nuværende- og ledige undervisningslokale&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <zorder>label_2</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>pushButton_2</zorder>
-   <zorder>listWidget</zorder>
-   <zorder>listWidget_2</zorder>
+   <widget class="QPushButton" name="Tilbage_til_hovedmenu">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>61</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(139, 45, 32);
+color: rgb(255, 255, 255);
+border-style:outset;
+border-radius:10px;
+font: 13pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Tilbage</string>
+    </property>
+   </widget>
+   <zorder>Banner</zorder>
+   <zorder>Flyt_til_hoejre</zorder>
+   <zorder>Flyt_til_venstre</zorder>
+   <zorder>NuvaerendeLokale</zorder>
+   <zorder>LedigeLokaler</zorder>
    <zorder>Lokale_aendringer_skift</zorder>
    <zorder>Godkend_aendring</zorder>
-   <zorder>comboBox</zorder>
-   <zorder>label</zorder>
-   <zorder>label_3</zorder>
-   <zorder>comboBox_2</zorder>
-   <zorder>label_5</zorder>
-   <zorder>label_4</zorder>
+   <zorder>Valg_af_kursus_menu</zorder>
+   <zorder>Valg_af_kursus_tekst</zorder>
+   <zorder>Informations_tekst2</zorder>
+   <zorder>Valg_ad_dato_menu</zorder>
+   <zorder>Valg_af_dato_tekst</zorder>
+   <zorder>Informations_tekst</zorder>
+   <zorder>Tilbage_til_hovedmenu</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
