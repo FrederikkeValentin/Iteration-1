@@ -3,6 +3,7 @@ from PyQt6.QtWidgets import *
 import sys
 
 #Oprettelse af class for hovedmenuen
+#CONTROLLER CLASS
 class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
     def __init__(self):
         super(Hovedmenu_UniPlanner, self).__init__()
