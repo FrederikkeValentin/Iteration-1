@@ -7,7 +7,6 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
     def __init__(self):
         super(Hovedmenu_UniPlanner, self).__init__()
         uic.loadUi('Hovedmenu_UniPlanner.ui', self)
-
         layout = QHBoxLayout()
 
         self.cb = QComboBox()
