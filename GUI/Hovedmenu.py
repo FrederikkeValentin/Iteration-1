@@ -13,6 +13,7 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
         self.cb = QComboBox()
 
         #Elementer tilføjes
+        self.cb.addItem("Mine anmodninger (skift af lokale)")
         self.cb.addItem("Søg")
         self.cb.addItem("Kursus")
         self.cb.addItems(["Hold", "Underviser", "Studerende"])

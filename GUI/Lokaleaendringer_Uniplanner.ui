@@ -18,14 +18,13 @@
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>270</y>
+      <y>320</y>
       <width>61</width>
-      <height>32</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(165, 97, 87);
-background-color: rgb(170, 170, 170);
+     <string notr="true">background-color: rgb(216, 216, 216);
 border-style:outset;
 border-radius:10px;</string>
     </property>
@@ -37,14 +36,13 @@ border-radius:10px;</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>310</y>
+      <y>350</y>
       <width>61</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(165, 97, 87);
-background-color: rgb(170, 170, 170);
+     <string notr="true">background-color: rgb(216, 216, 216);
 border-style:outset;
 border-radius:10px;</string>
     </property>
@@ -56,9 +54,9 @@ border-radius:10px;</string>
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>230</y>
+      <y>290</y>
       <width>211</width>
-      <height>181</height>
+      <height>141</height>
      </rect>
     </property>
     <item>
@@ -81,9 +79,9 @@ border-radius:10px;</string>
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>230</y>
+      <y>290</y>
       <width>201</width>
-      <height>181</height>
+      <height>141</height>
      </rect>
     </property>
     <item>
@@ -133,7 +131,7 @@ border-radius:10px;</string>
       <x>-30</x>
       <y>-10</y>
       <width>601</width>
-      <height>91</height>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -147,7 +145,7 @@ border-radius:10px;</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>60</y>
+      <y>50</y>
       <width>551</width>
       <height>20</height>
      </rect>
@@ -171,18 +169,18 @@ font: 15pt &quot;Arial&quot;;</string>
      <string>Anmode om ændringer/skift af lokale</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="Godkend_aendring">
+   <widget class="QPushButton" name="Send_anmodning">
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>430</y>
+      <y>440</y>
       <width>181</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(166, 94, 84, 131);
-color: rgb(255, 255, 255);
+     <string notr="true">background-color: rgb(170, 170, 170);
+color: rgb(0, 0, 0);
 border-color: rgb(0, 0, 0);
 border-style:outset;
 border-radius:10px;
@@ -193,48 +191,27 @@ font: 13pt &quot;Arial&quot;;
      <string>Send anmodning</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="Valg_af_kursus_menu">
+   <widget class="QLabel" name="Undervisning">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>120</y>
-      <width>201</width>
-      <height>21</height>
+      <x>50</x>
+      <y>180</y>
+      <width>451</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgba(139, 45, 32, 186);
-color: rgb(255, 255, 255);
-border-style:outset;
-font: 13pt &quot;Arial&quot;;</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>Humanbiologi (Panum)</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="Valg_af_kursus_tekst">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>100</y>
-      <width>441</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(212, 212, 212, 179);</string>
+     <string notr="true">background-color: rgb(200, 163, 158);</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Vælg kursus for ændringer/skift af lokale:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Forelæsning: Endokrine Sygdomme&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Kursus: Humanbiologi&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Aud. Einer Lundsgaard&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="Informations_tekst2">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>470</y>
+      <y>480</y>
       <width>551</width>
       <height>20</height>
      </rect>
@@ -243,33 +220,12 @@ font: 13pt &quot;Arial&quot;;</string>
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Din anmodning vil blive godkendt snarest: Afvent for notifikaiton&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QComboBox" name="Valg_ad_dato_menu">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>170</y>
-      <width>201</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(139, 45, 32, 186);
-color: rgb(255, 255, 255);
-border-style:outset;
-font: 13pt &quot;Arial&quot;;</string>
-    </property>
-    <item>
-     <property name="text">
-      <string>Tirsdag d. 15 Marts - 2022</string>
-     </property>
-    </item>
-   </widget>
    <widget class="QLabel" name="Valg_af_dato_tekst">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>150</y>
-      <width>441</width>
+      <x>50</x>
+      <y>80</y>
+      <width>451</width>
       <height>20</height>
      </rect>
     </property>
@@ -277,14 +233,14 @@ font: 13pt &quot;Arial&quot;;</string>
      <string notr="true">background-color: rgba(212, 212, 212, 179);</string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Vælg dato:&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Valgte dato:&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="Informations_tekst">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>210</y>
+      <y>270</y>
       <width>551</width>
       <height>20</height>
      </rect>
@@ -313,20 +269,75 @@ font: 13pt &quot;Arial&quot;;</string>
      <string>Tilbage</string>
     </property>
    </widget>
+   <widget class="QLabel" name="Tidspunkt_tekst">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>130</y>
+      <width>451</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(212, 212, 212, 179);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Tidspunkt på dagen:&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="dato_tekst">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>100</y>
+      <width>221</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(139, 45, 32, 186);
+color: rgb(255, 255, 255);
+border-style:outset;
+font: 13pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Tirsdag d. 15 Marts - 2022&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Tidspunkt_tekst_2">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>150</y>
+      <width>221</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(139, 45, 32, 186);
+color: rgb(255, 255, 255);
+border-style:outset;
+font: 13pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Kl. 9-10&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
    <zorder>Banner</zorder>
    <zorder>Flyt_til_hoejre</zorder>
    <zorder>Flyt_til_venstre</zorder>
    <zorder>NuvaerendeLokale</zorder>
    <zorder>LedigeLokaler</zorder>
    <zorder>Lokale_aendringer_skift</zorder>
-   <zorder>Godkend_aendring</zorder>
-   <zorder>Valg_af_kursus_menu</zorder>
-   <zorder>Valg_af_kursus_tekst</zorder>
+   <zorder>Send_anmodning</zorder>
+   <zorder>Undervisning</zorder>
    <zorder>Informations_tekst2</zorder>
-   <zorder>Valg_ad_dato_menu</zorder>
    <zorder>Valg_af_dato_tekst</zorder>
    <zorder>Informations_tekst</zorder>
    <zorder>Tilbage_til_hovedmenu</zorder>
+   <zorder>Tidspunkt_tekst</zorder>
+   <zorder>dato_tekst</zorder>
+   <zorder>Tidspunkt_tekst_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
