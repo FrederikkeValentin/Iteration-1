@@ -1,6 +1,6 @@
 from PyQt6 import QtWidgets, uic
 import sys
-import Skema
+
 
 class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
     def __init__(self):
@@ -11,14 +11,7 @@ class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
         self.show()
 
     def Send_anmodning_tryk(self):
-        print("Send anmodning trykkes på!")
-        liste_skema=[]
-        skema = Skema("15-02-22", "9-10", "Aud. Einer Lundsgaard", "Endokrine Sygdomme", "Humanbiologi")
-        liste_skema.append(skema)
-        print(skema)
-        print("ændrer lokale")
-        skema.set_lokale("Aud. Niels K. Jerne")
-        print(skema)
+        print("Send anmodning [trykkes på]")
         self.close()  # This will close the main GUI
 
 if __name__ == '__main__':
