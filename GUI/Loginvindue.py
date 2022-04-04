@@ -5,7 +5,7 @@ import sys
 class Login_UniPlanner(QtWidgets.QMainWindow):
     def __init__(self):
         super(Login_UniPlanner, self).__init__()
-        uic.loadUi('Login_UniPlanner.ui', self)
+        uic.loadUi('../View/Login_UniPlanner.ui', self)
 
         self.Login_knap.clicked.connect(self.Login_knap_tryk)
 
@@ -15,7 +15,6 @@ class Login_UniPlanner(QtWidgets.QMainWindow):
         print(self.Mail_felt.text())
         print(self.Kodeord_felt.text())
         print("Videre til hovedmenu")
-
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
