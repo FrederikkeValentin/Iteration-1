@@ -1,10 +1,11 @@
 from PyQt6 import QtWidgets, uic
 import sys
+#from View import "Login_Uniplanner.ui"
 
 class Login_UniPlanner(QtWidgets.QMainWindow):
     def __init__(self):
-        super(Login_UniPlanner, self).__init__()  # MyFirstAppUi must be the same as the name of the class
-        uic.loadUi('Login_UniPlanner.ui', self)  # MyFirstAppGUI.ui is the name of your ui file
+        super(Login_UniPlanner, self).__init__()
+        uic.loadUi('Login_UniPlanner.ui', self)
 
         self.Login_knap.clicked.connect(self.Login_knap_tryk)
 
