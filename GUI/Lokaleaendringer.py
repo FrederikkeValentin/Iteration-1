@@ -5,7 +5,7 @@ import sys
 class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
     def __init__(self):
         super(Lokaleaendringer_UniPlanner, self).__init__()
-        uic.loadUi('Lokaleaendringer_UniPlanner.ui', self)
+        uic.loadUi('../View/Lokaleaendringer_UniPlanner.ui', self)
 
         self.Send_anmodning.clicked.connect(self.Send_anmodning_tryk)
         self.show()
