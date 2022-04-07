@@ -21,4 +21,3 @@ class Skema:
 
     def get_kursus(self): return self.__kursus
     def set_kursus(self, nyt_kursus): self.__dato = nyt_kursus
-
