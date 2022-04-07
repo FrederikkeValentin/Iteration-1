@@ -3,6 +3,7 @@ from stdnum.dk import cpr
 
 #Private attribute
 class Underviser:
+    """Dette er en class for underviser"""
     def __init__(self, navn: str, email:str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: int, kursus:str):
         self.__navn = navn
         self.__email = email

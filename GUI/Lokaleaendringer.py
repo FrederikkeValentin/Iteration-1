@@ -1,7 +1,6 @@
 from PyQt6 import QtWidgets, uic
 import sys
 
-
 class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
     def __init__(self):
         super(Lokaleaendringer_UniPlanner, self).__init__()
@@ -14,9 +13,7 @@ class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
         print("Send anmodning [trykkes på]")
         self.close()  # This will close the main GUI
 
-        button = QtWidgets.QMessageBox.question(self, "Hurtig bemærkning", "Bekræft at du vil sende en anmoding om lokaleskift. "
-                                                                           "Ved lang svartid, skal du sende en ny")
-
+        button = QtWidgets.QMessageBox.question(self, "Hurtig bemærkning", "Bekræft at du vil sende en anmoding om lokaleskift" "Ved lang svartid, skal du sende en ny")
         if button == QtWidgets.QMessageBox.StandardButton.Yes:
             print("Yes, send anmodning!")
         else:

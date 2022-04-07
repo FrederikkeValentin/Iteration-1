@@ -1,4 +1,5 @@
 class Anmod_om_lokale_skift:
+    """Dette er en class for anmod om lokaleskift"""
     def __init__(self, dato: str, tidspunkt: str, lokale: str, forelæsning: str, kursus: str, nuvaerende_lokale: str, ledige_lokaler: str, anmodning: str):
         self.__dato = dato
         self.__tidspunkt = tidspunkt

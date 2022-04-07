@@ -1,4 +1,5 @@
 class Afvis_eller_godkend_anmodning:
+    """Dette er en class for afvis eller godkend anmodning"""
     def __init__(self, dato: str, tidspunkt: str, lokale: str, forelæsning: str, kursus: str, nuvaerende_lokale: str, ledige_lokaler: str, godkend_amnodning: str, afvis_anmodning: str):
         self.__dato = dato
         self.__tidspunkt = tidspunkt

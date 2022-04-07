@@ -1,8 +1,21 @@
 from PyQt6 import QtWidgets, uic
 from PyQt6.QtWidgets import *
 import sys
+from GUI.Lokaleaendringer import Lokaleaendringer_UniPlanner
 
 #Oprettelse af class for hovedmenuen
+class Hovedmenu(object):
+    """This is the system model"""
+    anmodning = False
+
+    @classmethod
+    def get_anmodning(cls):
+        return cls.anmodning
+
+    @classmethod
+    def set_anmodning(cls, l):
+        cls.anmodning = l
+
 #CONTROLLER CLASS
 class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
     def __init__(self):
@@ -55,6 +68,8 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
 
     def Lokale_aendringer_skift_tryk(self):
         print("Videre til muligheder for ændringer eller skift af lokale, eventult fjernelse eller tilføjelse")
+        Hovedmenu.set_anmodning(True)
+        self.close()
 
     def NaesteUge_tryk(self):
         print("Der vises næste uges skema")
@@ -69,3 +84,7 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = Hovedmenu_UniPlanner()
     app.exec()
+    if Hovedmenu.get_anmodning() is True:
+        print("videre til anmodnings muligheder")
+        window3 = Lokaleaendringer_UniPlanner()
+        app.exec()

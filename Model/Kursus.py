@@ -1,4 +1,5 @@
 class Kursus:
+    """Dette er en class for kursus"""
     def __init__(self, kursusnavn: str, kursusID: int, ECTS: float, kursuskapacitet: int, varighed: str, kursusansvarlig: str, andre_undervisere: str, akademisk_grad: str, placering: str, udbydende_institut: str):
         self.__kursusnavn = kursusnavn
         self.__kursusID = kursusID
