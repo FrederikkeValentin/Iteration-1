@@ -31,7 +31,6 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
 
         #Knappen for: Ændringer/skift af lokale
         self.Lokale_aendringer_skift.clicked.connect(self.Lokale_aendringer_skift_tryk)
-        open.screen("../View/Lokaleaendringer_UniPlanner.ui")
 
         #Knappen for: Næste uge af skemaet
         self.NaesteUge.clicked.connect(self.NaesteUge_tryk)
@@ -56,7 +55,6 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
 
     def Lokale_aendringer_skift_tryk(self):
         print("Videre til muligheder for ændringer eller skift af lokale, eventult fjernelse eller tilføjelse")
-        ui = "../View/Lokaleaendringer_UniPlanner.ui"
 
     def NaesteUge_tryk(self):
         print("Der vises næste uges skema")

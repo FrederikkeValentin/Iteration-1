@@ -1,4 +1,4 @@
-class Underviser:
+class Sekretaer:
     def __init__(self, navn: str, email: str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: int):
         self.__navn = navn
         self.__email = email
