@@ -21,7 +21,7 @@ class Sekretaer:
     def set_cpr_nummer(self, nyt_cpr_nummer): self.__cpr_nummer = nyt_cpr_nummer
 
     def get_titel(self): return self.__titel
-    def set_titel(self, ny_titel): self.__email = ny_titel
+    def set_titel(self, ny_titel): self.__titel = ny_titel
 
     def get_ansættelses_nr(self): return self.__ansættelses_nr
     def set_ansættelses_nr(self, nyt_ansættelses_nr): self.__email = nyt_ansættelses_nr
