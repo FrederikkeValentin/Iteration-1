@@ -25,3 +25,7 @@ class Sekretaer:
 
     def get_ansættelses_nr(self): return self.__ansættelses_nr
     def set_ansættelses_nr(self, nyt_ansættelses_nr): self.__email = nyt_ansættelses_nr
+
+    def __str__(self):
+        return f"{self.__navn}, {self.__email}" \
+               f", {self.__adresse}, {self.__cpr_nummer}, {self.__titel},{self.__ansættelses_nr}"

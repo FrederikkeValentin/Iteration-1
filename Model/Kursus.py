@@ -41,3 +41,9 @@ class Kursus:
 
     def get_udbydende_institut(self): return self.__udbydende_institut
     def set_udbydende_institut(self, nyt_udbydende_institut): self.__udbydende_institut = nyt_udbydende_institut
+
+    def __str__(self):
+        return f"{self.__kursusnavn}, {self.__kursusID}" \
+               f", {self.__ECTS}, {self.__kursuskapacitet},{self.__varighed}, " \
+               f"{self.__kursusansvarlig}, {self.__andre_undervisere}, {self.__akademisk_grad}, " \
+               f"{self.__placering}, {self.__udbydende_institut}"
