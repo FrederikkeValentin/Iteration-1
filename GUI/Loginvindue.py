@@ -9,7 +9,6 @@ class Login(object):
     @classmethod
     def get_login(cls):
         return cls.login
-
     @classmethod
     def set_login(cls, l):
         cls.login = l
@@ -22,12 +21,12 @@ class Model(object):
     @classmethod
     def set_current_user(cls, user):
         cls.current_user = user
-
     @classmethod
     def get_current_user(cls):
         return cls.current_user
 
 class Login_UniPlanner(QtWidgets.QMainWindow):
+    """Class for Loginvinduet"""
     def __init__(self):
         super(Login_UniPlanner, self).__init__()
         uic.loadUi('../View/Login_UniPlanner.ui', self)
@@ -39,7 +38,7 @@ class Login_UniPlanner(QtWidgets.QMainWindow):
     def Login_knap_tryk(self):
         print(self.Mail_felt.text())
         print(self.Kodeord_felt.text())
-        print("Videre til hovedmenu")
+        print("Succesfuldt logget ind i: UniPlanner")
 
         Login.set_login(True)
         self.close()
@@ -49,6 +48,6 @@ if __name__ == '__main__':
     window = Login_UniPlanner()
     app.exec()
     if Login.get_login() is True:
-        print("logget ind")
+        print("Videre til hovedmenu")
         window2 = Hovedmenu_UniPlanner()
         app.exec()

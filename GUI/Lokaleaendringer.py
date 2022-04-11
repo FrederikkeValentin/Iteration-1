@@ -2,6 +2,7 @@ from PyQt6 import QtWidgets, uic
 import sys
 
 class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
+    """Class for Lokaleændringer vinduet"""
     def __init__(self):
         super(Lokaleaendringer_UniPlanner, self).__init__()
         uic.loadUi('../View/Lokaleaendringer_UniPlanner.ui', self)

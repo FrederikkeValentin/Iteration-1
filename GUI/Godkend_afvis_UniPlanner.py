@@ -2,6 +2,7 @@ from PyQt6 import QtWidgets, uic
 import sys
 
 class Godkend_afvis_UniPlanner(QtWidgets.QMainWindow):
+    """Class for godkend eller afvis vinduet - for sekræteren"""
     def __init__(self):
         super(Godkend_afvis_UniPlanner, self).__init__()
         uic.loadUi('../View/Godkend_afvis_UniPlanner.ui', self)

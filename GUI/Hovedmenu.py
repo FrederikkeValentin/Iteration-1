@@ -18,6 +18,7 @@ class Hovedmenu(object):
 
 #CONTROLLER CLASS
 class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
+    """Class for Hovedmenu vinduet"""
     def __init__(self):
         super(Hovedmenu_UniPlanner, self).__init__()
         uic.loadUi('../View/Hovedmenu_UniPlanner.ui', self)
