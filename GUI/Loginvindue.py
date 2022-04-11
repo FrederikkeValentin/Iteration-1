@@ -26,13 +26,14 @@ class Model(object):
         return cls.current_user
 
 class Login_UniPlanner(QtWidgets.QMainWindow):
-    """Class for Loginvinduet"""
+    """Class for Loginvinduet (set fra alles vinkel)
+    Der kræves UNI-mail og 4-cifret (tal) kode for at logge ind i UniPlanner"""
+
     def __init__(self):
         super(Login_UniPlanner, self).__init__()
         uic.loadUi('../View/Login_UniPlanner.ui', self)
 
         self.Login_knap.clicked.connect(self.Login_knap_tryk)
-
         self.show()
 
     def Login_knap_tryk(self):

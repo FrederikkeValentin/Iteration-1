@@ -18,7 +18,10 @@ class Hovedmenu(object):
 
 #CONTROLLER CLASS
 class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
-    """Class for Hovedmenu vinduet"""
+    """Class for Hovedmenu vinduet (set fra underviserens vinkel)
+    Hovedmenuen indeholder menupunkt med valgmuligheder = (mine anmodninger, søg, kurser, studerende og underviser),
+    mulighed for indberettlse af ledighed og ændringer i skemaet med henblik på lokaleskfit/ændringer"""
+
     def __init__(self):
         super(Hovedmenu_UniPlanner, self).__init__()
         uic.loadUi('../View/Hovedmenu_UniPlanner.ui', self)

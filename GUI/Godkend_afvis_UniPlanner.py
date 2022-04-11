@@ -2,7 +2,10 @@ from PyQt6 import QtWidgets, uic
 import sys
 
 class Godkend_afvis_UniPlanner(QtWidgets.QMainWindow):
-    """Class for godkend eller afvisning af anmoding fra underviser (vinduet) - for sekræteren"""
+    """Class for godkend eller afvisning af anmoding fra underviser (set fra sekræterens vinkel)
+    Vinduet skal tolkes som en pop-up notifikation/vindue [Anmodninger kan åbnes manuelt] på sekretærens Hovedmenu, med anmodninger fra undervisere om lokaleskift/ændringer!
+    Ved flere notifikationer om lokaleskfit/ændringer, vil det fremgå af en liste, som så individiuelt kan trykkes på og godkendes/afvises"""
+
     def __init__(self):
         super(Godkend_afvis_UniPlanner, self).__init__()
         uic.loadUi('../View/Godkend_afvis_UniPlanner.ui', self)
