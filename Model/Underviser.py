@@ -61,5 +61,5 @@ class Underviser:
     def __str__(self):
         return f"{self.__navn}, {self.__cpr_nummer}" \
                f", {self.__adresse}, {self.__titel},{self.__ansættelses_nr}, " \
-               f"{self.__kursus}, {self.__send_anmodning}, {self.__indberette_tilgængelighed}, " \
-               f"{self.__login_uniplanner}, {self.__se_skema}, age: {self.get_alder()} years"
+               f"{self.__kursus},{self.__login_uniplanner}, {self.__se_skema}, {self.__send_anmodning}, " \
+               f"{self.__indberette_tilgængelighed}, age: {self.get_alder()} years"
