@@ -4,7 +4,7 @@ from stdnum.dk import cpr
 #Private attribute
 class Underviser:
     """Dette er en class for underviser"""
-    def __init__(self, navn: str, email:str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: int, kursus:str, send_anmodning: str, indberette_tilgængelighed:str):
+    def __init__(self, navn: str, email:str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: int, kursus:str, login_uniplanner: str, se_skema: str, send_anmodning: str, indberette_tilgængelighed:str):
         self.__navn = navn
         self.__email = email
         self.__adresse = adresse
@@ -12,6 +12,8 @@ class Underviser:
         self.__titel = titel
         self.__ansættelses_nr = ansættelses_nr
         self.__kursus = kursus
+        self.__login_uniplanner = login_uniplanner
+        self.__se_skema = se_skema
         self.__send_anmodning = send_anmodning
         self.__indberette_tilgængelighed = indberette_tilgængelighed
 
@@ -44,6 +46,12 @@ class Underviser:
         __alder_dato = __dato_idag - __fødsels_information
         return int(__alder_dato.days / 365.2425)
 
+    def login_uniplanner(self): return self.__login_uniplanner
+    def login_uniplanner(self, ny_login_uniplanner): self.__login_uniplanner = ny_login_uniplanner
+
+    def se_skema(self): return self.__se_skema
+    def se_skema(self, nyt_se_skema): self.__se_skema = nyt_se_skema
+
     def send_anmodning(self): return self.__send_anmodning
     def send_anmodning(self, ny_send_anmodning): self.__send_anmodning = ny_send_anmodning
 
@@ -54,4 +62,4 @@ class Underviser:
         return f"{self.__navn}, {self.__cpr_nummer}" \
                f", {self.__adresse}, {self.__titel},{self.__ansættelses_nr}, " \
                f"{self.__kursus}, {self.__send_anmodning}, {self.__indberette_tilgængelighed}, " \
-               f"age: {self.get_alder()} years"
+               f"{self.__login_uniplanner}, {self.__se_skema}, age: {self.get_alder()} years"

@@ -47,11 +47,14 @@
 gridline-color: rgb(139, 45, 32);
 border-color: rgb(139, 45, 32);</string>
     </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhEmailCharactersOnly|Qt::ImhNoPredictiveText</set>
+    </property>
     <property name="text">
-     <string>Skriv din Uni-mail her</string>
+     <string/>
     </property>
     <property name="placeholderText">
-     <string/>
+     <string>Skriv din Uni-mail her:</string>
     </property>
     <property name="clearButtonEnabled">
      <bool>true</bool>
@@ -82,7 +85,7 @@ border-color: rgb(139, 45, 32);</string>
      <enum>QLineEdit::Password</enum>
     </property>
     <property name="placeholderText">
-     <string>Skriv dit kodeord her</string>
+     <string>Skriv dit 4-cifret kodeord her:</string>
     </property>
     <property name="clearButtonEnabled">
      <bool>true</bool>

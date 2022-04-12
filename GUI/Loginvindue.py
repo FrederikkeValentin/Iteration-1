@@ -49,6 +49,6 @@ if __name__ == '__main__':
     window = Login_UniPlanner()
     app.exec()
     if Login.get_login() is True:
-        print("Videre til hovedmenu")
-        window2 = Hovedmenu_UniPlanner()
+        print("Videre til Hovedmenu")
+        vindue2 = Hovedmenu_UniPlanner()
         app.exec()

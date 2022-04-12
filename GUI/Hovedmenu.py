@@ -3,7 +3,7 @@ from PyQt6.QtWidgets import *
 import sys
 from GUI.Lokaleaendringer import Lokaleaendringer_UniPlanner
 
-#Oprettelse af class for hovedmenuen
+#Oprettelse af class for Hovedmenuen
 class Hovedmenu(object):
     """This is the system model"""
     anmodning = False
@@ -35,7 +35,7 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
         self.cb.addItem("Kursus")
         self.cb.addItems(["Hold", "Underviser", "Studerende"])
 
-        #Her connecter min metode "selectionchange" til det valgte element
+        #Her connecter jeg min metode "selectionchange", til det valgte element
         self.cb.currentIndexChanged.connect(self.selectionchange)
 
         #Combobox tilføjes til layout
@@ -82,13 +82,13 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
         print("Der vises forrige uges skema")
 
     def LogUd_tryk(self):
-        self.close()  # Dette vil lukke det hele
+        self.close()  #Dette vil lukke det hele
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = Hovedmenu_UniPlanner()
     app.exec()
     if Hovedmenu.get_anmodning() is True:
-        print("videre til anmodnings muligheder")
+        print("Videre til anmodnings muligheder")
         window3 = Lokaleaendringer_UniPlanner()
         app.exec()

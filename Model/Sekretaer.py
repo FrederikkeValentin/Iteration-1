@@ -1,11 +1,13 @@
 class Sekretaer:
     """Dette er en class for sekretær"""
-    def __init__(self, navn: str, email: str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: int):
+    def __init__(self, navn: str, email: str, adresse: str, cpr_nummer: str, titel: str, login_uniplanner: str, se_skema: str, ansættelses_nr: int):
         self.__navn = navn
         self.__email = email
         self.__adresse = adresse
         self.__cpr_nummer = cpr_nummer
         self.__titel = titel
+        self.__login_uniplanner = login_uniplanner
+        self.__se_skema = se_skema
         self.__ansættelses_nr = ansættelses_nr
 
     def get_navn(self): return self.__navn
@@ -23,9 +25,16 @@ class Sekretaer:
     def get_titel(self): return self.__titel
     def set_titel(self, ny_titel): self.__titel = ny_titel
 
+    def login_uniplanner(self): return self.__login_uniplanner
+    def login_uniplanner(self, ny_login_uniplanner): self.__login_uniplanner = ny_login_uniplanner
+
+    def se_skema(self): return self.__se_skema
+    def se_skema(self, nyt_se_skema): self.__se_skema = nyt_se_skema
+
     def get_ansættelses_nr(self): return self.__ansættelses_nr
     def set_ansættelses_nr(self, nyt_ansættelses_nr): self.__email = nyt_ansættelses_nr
 
     def __str__(self):
         return f"{self.__navn}, {self.__email}" \
-               f", {self.__adresse}, {self.__cpr_nummer}, {self.__titel},{self.__ansættelses_nr}"
+               f", {self.__adresse}, {self.__cpr_nummer}, {self.__titel}," \
+               f"{self.__login_uniplanner},{self.__se_skema},{self.__ansættelses_nr}"

@@ -17,7 +17,7 @@ class Godkend_afvis_UniPlanner(QtWidgets.QMainWindow):
     def Godkend_aendring_tryk(self):
         print("Godkend: [trykkes på]")
         print("Anmodning fra underviseren GODKENDES og ændringen vedtages/opdateres "
-              "i underviserens, TA's og de studerendes skema.")
+              "i underviserens, TA's og de studerendes skema (notifikation om lokaleændringer sendes ud!).")
         self.close()
 
     def Afvis_aendring_tryk(self):

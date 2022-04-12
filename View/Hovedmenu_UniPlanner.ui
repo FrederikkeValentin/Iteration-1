@@ -274,7 +274,7 @@ font: 13pt &quot;Arial&quot;;</string>
       </brush>
      </property>
      <property name="foreground">
-      <brush brushstyle="NoBrush">
+      <brush brushstyle="Dense5Pattern">
        <color alpha="255">
         <red>255</red>
         <green>255</green>
