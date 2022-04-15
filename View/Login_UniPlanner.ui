@@ -48,7 +48,7 @@ gridline-color: rgb(139, 45, 32);
 border-color: rgb(139, 45, 32);</string>
     </property>
     <property name="inputMethodHints">
-     <set>Qt::ImhEmailCharactersOnly|Qt::ImhNoPredictiveText</set>
+     <set>Qt::ImhEmailCharactersOnly</set>
     </property>
     <property name="text">
      <string/>
