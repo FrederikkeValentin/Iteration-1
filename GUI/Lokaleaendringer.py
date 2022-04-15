@@ -2,7 +2,7 @@ from PyQt6 import QtWidgets, uic
 import sys
 
 class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
-    """Class for Lokaleændringer vinduet (set fra underviserens vinkel.
+    """Class for Lokaleændringer vinduet (set fra underviserens vinkel)
     Her har en underviser mulighed for at anmode om lokaleskift/ændringer til fx en forelæsning
     Det er sekretæren som skal godkende eller afvise den pågældende anmondning i hendes egen UniPlanner (se: Godkend_afvis_UniPlanner))"""
 
@@ -25,5 +25,5 @@ class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
-    window = Lokaleaendringer_UniPlanner()
+    vindue1 = Lokaleaendringer_UniPlanner()
     app.exec()

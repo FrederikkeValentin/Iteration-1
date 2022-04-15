@@ -89,6 +89,6 @@ if __name__ == '__main__':
     window = Hovedmenu_UniPlanner()
     app.exec()
     if Hovedmenu.get_anmodning() is True:
-        print("Videre til anmodnings muligheder")
-        window3 = Lokaleaendringer_UniPlanner()
+        print("Videre til anmodning/skuft af lokale siden")
+        vindue3 = Lokaleaendringer_UniPlanner()
         app.exec()
