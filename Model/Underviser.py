@@ -4,8 +4,9 @@ from stdnum.dk import cpr
 #Private attribute
 class Underviser:
     """Dette er en class for underviser"""
-    def __init__(self, navn: str, email:str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: int, kursus:str, login_uniplanner: str, se_skema: str, send_anmodning: str, indberette_tilgængelighed:str):
-        self.__navn = navn
+    def __init__(self, fornavn: str, efternavn: str, email:str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: int, kursus:str, login_uniplanner: str, se_skema: str, send_anmodning: str, indberette_tilgængelighed:str):
+        self.__fornavn = fornavn
+        self.__efternavn = efternavn
         self.__email = email
         self.__adresse = adresse
         self.__cpr_nummer = cpr_nummer
@@ -17,8 +18,11 @@ class Underviser:
         self.__send_anmodning = send_anmodning
         self.__indberette_tilgængelighed = indberette_tilgængelighed
 
-    def get_navn(self): return self.__navn
-    def set_navn(self, nyt_navn): self.__navn = nyt_navn
+    def get_fornavn(self): return self.__fornavn
+    def set_fornavn(self, nyt_fornavn): self.__fornavn = nyt_fornavn
+
+    def get_efternavn(self): return self.__efternavn
+    def set_efternavn(self, nyt_efternavn): self.__efternavn = nyt_efternavn
 
     def get_email(self): return self.__email
     def set_email(self, ny_email): self.__email = ny_email

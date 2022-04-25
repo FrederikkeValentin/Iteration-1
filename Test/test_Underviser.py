@@ -2,11 +2,21 @@ import Validator
 
 #def __init__(self, navn: str, email:str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: int, kursus:str):
 
-## NAVN
+## FORNAVN
 def test_validate_navn_god():
-    assert Validator.validate_navn("Lisbeth Lund", 80) == True
+    assert Validator.validate_navn("Lisbeth", 80) == True
 def test_validate_navn_for_lang():
-    assert Validator.validate_navn("Lisbeth Lund", 10) == False
+    assert Validator.validate_navn("Lisbeth", 10) == False
+def test_validate_navn_for_kort():
+    assert Validator.validate_navn("A B") == False
+def test_validate_navn_daarligt_format():
+    assert Validator.validate_navn("abc !?!") == False
+
+## EFTERNAVN
+def test_validate_navn_god():
+    assert Validator.validate_navn("Lund", 80) == True
+def test_validate_navn_for_lang():
+    assert Validator.validate_navn("Lund", 10) == False
 def test_validate_navn_for_kort():
     assert Validator.validate_navn("A B") == False
 def test_validate_navn_daarligt_format():

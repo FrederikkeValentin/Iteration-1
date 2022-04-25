@@ -1,7 +1,8 @@
 class Sekretaer:
     """Dette er en class for sekretær"""
-    def __init__(self, navn: str, email: str, adresse: str, cpr_nummer: str, titel: str, login_uniplanner: str, se_skema: str, ansættelses_nr: int):
-        self.__navn = navn
+    def __init__(self, fornavn: str, efternavn: str, email: str, adresse: str, cpr_nummer: str, titel: str, login_uniplanner: str, se_skema: str, ansættelses_nr: int):
+        self.__fornavn = fornavn
+        self.__efternavn = efternavn
         self.__email = email
         self.__adresse = adresse
         self.__cpr_nummer = cpr_nummer
@@ -10,8 +11,11 @@ class Sekretaer:
         self.__se_skema = se_skema
         self.__ansættelses_nr = ansættelses_nr
 
-    def get_navn(self): return self.__navn
-    def set_navn(self, nyt_navn): self.__navn = nyt_navn
+    def get_fornavn(self): return self.__fornavn
+    def set_fornavn(self, nyt_fornavn): self.__fornavn = nyt_fornavn
+
+    def get_efternavn(self): return self.__efternavn
+    def set_efternavn(self, nyt_efternavn): self.__efternavn = nyt_efternavn
 
     def get_email(self): return self.__email
     def set_email(self, ny_email): self.__email = ny_email
