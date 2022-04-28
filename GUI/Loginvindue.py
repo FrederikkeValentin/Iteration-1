@@ -11,7 +11,7 @@ class Login(object):
         return cls.login
     @classmethod
     def set_login(cls, l):
-        cls.login = l
+        cls.login = l #l er en parameter
 
 class Model(object):
     """This is the system model"""

@@ -11,6 +11,8 @@ class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
         uic.loadUi('../View/Lokaleaendringer_UniPlanner.ui', self)
 
         self.Send_anmodning.clicked.connect(self.Send_anmodning_tryk)
+        self.Tilbage_til_hovedmenu.clicked.connect(self.Tilbage_til_hovedmenu_tryk)
+
         self.show()
 
     def Send_anmodning_tryk(self):
@@ -22,6 +24,9 @@ class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
             print("Yes, send anmodning!")
         else:
             print("No. Jeg dobbelttjekker lige min anmodning!")
+
+    def Tilbage_til_hovedmenu_tryk(self):
+        self.close()
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
