@@ -18,6 +18,7 @@ class Underviser:
         self.__send_anmodning = send_anmodning
         self.__indberette_tilgængelighed = indberette_tilgængelighed
 
+    # Nedenstående er getters and setters
     def get_fornavn(self): return self.__fornavn
     def set_fornavn(self, nyt_fornavn): self.__fornavn = nyt_fornavn
 

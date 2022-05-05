@@ -11,6 +11,7 @@ class Sekretaer:
         self.__se_skema = se_skema
         self.__ansættelses_nr = ansættelses_nr
 
+# Nedenstående er getters and setters
     def get_fornavn(self): return self.__fornavn
     def set_fornavn(self, nyt_fornavn): self.__fornavn = nyt_fornavn
 

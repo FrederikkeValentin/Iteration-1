@@ -22,8 +22,8 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
         self.cb.addItem("Kursus")
         self.cb.addItems(["Hold", "Underviser", "Studerende"])
 
-        #Her connecter jeg min metode "selectionchange", til det valgte element
-        self.cb.currentIndexChanged.connect(self.selectionchange)
+        #Her connecter jeg min metode "dropdown", til det valgte element
+        self.cb.currentIndexChanged.connect(self.dropdown)
 
         #Combobox tilføjes til layout
         layout.addWidget(self.cb)
@@ -48,26 +48,32 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
         self.show()
 
 #Def af de forskellige knapper og hvad der sker når man trykker på dem!
-    def selectionchange(self, i):
+    #DROPDOWN
+    def dropdown(self, i):
         print("Items in the list are :")
         for count in range(self.cb.count()):
                 print(self.cb.itemText(count))
                 print("Current index", i, "selection changed ", self.cb.currentText())
 
+    #TILGÆNGELIGHED
     def Tilgaengelighed_tryk(self):
         print("Videre til muligheder for valg af dage man IKKE kan undervise")
 
+    #LOKALE ÆNDRINGER
     def Lokale_aendringer_skift_tryk(self):
         print("Videre til muligheder for ændringer eller skift af lokale, eventult fjernelse eller tilføjelse")
         self.lokale_skift = Lokaleaendringer_UniPlanner()
         self.lokale_skift.show()
 
+    # NÆSTE UGE
     def NaesteUge_tryk(self):
         print("Der vises næste uges skema")
 
+    #FORRIGE UGE
     def ForrigeUge_tryk(self):
         print("Der vises forrige uges skema")
 
+    #LOG UD
     def LogUd_tryk(self):
         self.close()  #Dette vil lukke det hele
 

@@ -14,12 +14,15 @@ class Godkend_afvis_UniPlanner(QtWidgets.QMainWindow):
         self.Afvis_aendring.clicked.connect(self.Afvis_aendring_tryk)
         self.show()
 
+    #Def af de forskellige knapper og hvad der sker når man trykker på dem!
+    #GODKEND ÆNDRNG
     def Godkend_aendring_tryk(self):
         print("Godkend: [trykkes på]")
         print("Anmodning fra underviseren GODKENDES og ændringen vedtages/opdateres "
               "i underviserens, TA's og de studerendes skema (notifikation om lokaleændringer sendes ud!).")
         self.close()
 
+    #AFVIS ÆNDRING
     def Afvis_aendring_tryk(self):
         print("Afvis: [trykkes på]")
         print("Anmodning fra underviseren AFVISES og skemaet forbliver det samme. "

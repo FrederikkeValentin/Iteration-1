@@ -15,6 +15,8 @@ class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
 
         self.show()
 
+    #Def af de forskellige knapper og hvad der sker når man trykker på dem!
+    #SEND ANDMONING
     def Send_anmodning_tryk(self):
         print("Send anmodning [trykkes på]")
         self.close()
@@ -25,6 +27,7 @@ class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
         else:
             print("No. Jeg dobbelttjekker lige min anmodning!")
 
+    #TILBAGE TIL HOVEDMENU
     def Tilbage_til_hovedmenu_tryk(self):
         self.close()
 

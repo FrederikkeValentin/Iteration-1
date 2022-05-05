@@ -33,9 +33,13 @@ class Login_UniPlanner(QtWidgets.QMainWindow):
         super(Login_UniPlanner, self).__init__()
         uic.loadUi('../View/Login_UniPlanner.ui', self)
 
+        # Knappen for: Login
         self.Login_knap.clicked.connect(self.Login_knap_tryk)
+
         self.show()
 
+    #Def af de forskellige knapper og hvad der sker når man trykker på dem!
+    #LOGIN KNAP
     def Login_knap_tryk(self):
         print(self.Mail_felt.text())
         print(self.Kodeord_felt.text())

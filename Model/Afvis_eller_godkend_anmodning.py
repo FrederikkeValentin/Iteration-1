@@ -11,6 +11,7 @@ class Afvis_eller_godkend_anmodning:
         self.__afvis_anmodning = afvis_anmodning
         self.__godkend_anmodning = godkend_amnodning
 
+# Nedenstående er getters and setters
     def get_dato(self): return self.__dato
     def set_dato(self, ny_dato): self.__dato = ny_dato
 

@@ -7,6 +7,7 @@ class Skema:
         self.__forelæsning = forelæsning
         self.__kursus = kursus
 
+# Nedenstående er getters and setters
     def get_dato(self): return self.__dato
     def set_dato(self, ny_dato): self.__dato = ny_dato
 
