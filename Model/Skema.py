@@ -1,3 +1,4 @@
+#Private attribute
 class Skema:
     """Dette er en class for skema"""
     def __init__(self, dato: str, tidspunkt: str, lokale: str, forelæsning: str, kursus: str):

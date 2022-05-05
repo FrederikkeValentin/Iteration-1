@@ -34,7 +34,7 @@ class Login_UniPlanner(QtWidgets.QMainWindow):
         uic.loadUi('../View/Login_UniPlanner.ui', self)
 
         # Knappen for: Login
-        self.Login_knap.clicked.connect(self.Login_knap_tryk)
+        self.Login_knap.clicked.connect(self.Login_knap_tryk) #self referer til objektet selv
 
         self.show()
 
