@@ -29,6 +29,7 @@ class Godkend_afvis_UniPlanner(QtWidgets.QMainWindow):
               "Ny anmodning er nødvendig fra underviseren.")
         self.close()
 
+#Starter app-vinduet
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = Godkend_afvis_UniPlanner()

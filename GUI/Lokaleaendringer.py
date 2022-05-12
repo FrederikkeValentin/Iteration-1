@@ -31,6 +31,7 @@ class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
     def Tilbage_til_hovedmenu_tryk(self):
         self.close()
 
+#Starter app-vinduet
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     vindue1 = Lokaleaendringer_UniPlanner()

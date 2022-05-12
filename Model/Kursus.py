@@ -12,7 +12,7 @@ class Kursus:
         self.__placering = placering
         self.__udbydende_institut = udbydende_institut
 
-# Nedenstående er getters and setters
+    # Nedenstående er getters and setters
     def get_kursusnavn(self): return self.__kursusnavn
     def set_kursusnavn(self, nyt_kursusnavn): self.__kursusnavn = nyt_kursusnavn
 

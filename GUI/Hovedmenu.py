@@ -77,6 +77,7 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
     def LogUd_tryk(self):
         self.close()  #Dette vil lukke det hele
 
+#Starter app-vinduet
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = Hovedmenu_UniPlanner()

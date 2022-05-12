@@ -1,3 +1,4 @@
+#Private attribute
 class Anmod_om_lokale_skift:
     """Dette er en class for anmod om lokaleskift"""
     def __init__(self, dato: str, tidspunkt: str, lokale: str, forelæsning: str, kursus: str, nuvaerende_lokale: str, ledige_lokaler: str, anmodning: str):
@@ -10,7 +11,7 @@ class Anmod_om_lokale_skift:
         self.__ledige_lokaler = ledige_lokaler
         self.__anmodning = anmodning
 
-# Nedenstående er getters and setters
+    # Nedenstående er getters and setters
     def get_dato(self): return self.__dato
     def set_dato(self, ny_dato): self.__dato = ny_dato
 

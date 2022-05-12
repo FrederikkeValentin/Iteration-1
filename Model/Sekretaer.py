@@ -1,3 +1,4 @@
+#Private attribute
 class Sekretaer:
     """Dette er en class for sekretær"""
     def __init__(self, fornavn: str, efternavn: str, email: str, adresse: str, cpr_nummer: str, titel: str, login_uniplanner: str, se_skema: str, ansættelses_nr: int):
@@ -11,7 +12,7 @@ class Sekretaer:
         self.__se_skema = se_skema
         self.__ansættelses_nr = ansættelses_nr
 
-# Nedenstående er getters and setters
+    # Nedenstående er getters and setters
     def get_fornavn(self): return self.__fornavn
     def set_fornavn(self, nyt_fornavn): self.__fornavn = nyt_fornavn
 

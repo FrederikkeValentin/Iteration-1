@@ -48,6 +48,7 @@ class Login_UniPlanner(QtWidgets.QMainWindow):
         Login.set_login(True)
         self.close()
 
+#Starter app-vinduet
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     window = Login_UniPlanner()
