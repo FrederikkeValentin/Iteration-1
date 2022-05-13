@@ -1,7 +1,7 @@
 #Private attribute
 class Sekretaer:
     """Dette er en class for sekretær"""
-    def __init__(self, fornavn: str, efternavn: str, email: str, adresse: str, cpr_nummer: str, titel: str, login_uniplanner: str, se_skema: str, ansættelses_nr: int):
+    def __init__(self, fornavn: str, efternavn: str, email: str, adresse: str, cpr_nummer: str, titel: str, login_uniplanner: str, se_skema: str, ansættelses_nr: str):
         self.__fornavn = fornavn
         self.__efternavn = efternavn
         self.__email = email

@@ -1,5 +1,6 @@
 from PyQt6 import QtWidgets, uic
 import sys
+from Persistence import Database_Connection
 from GUI.Hovedmenu import Hovedmenu_UniPlanner
 
 class Login(object):
@@ -12,18 +13,6 @@ class Login(object):
     @classmethod
     def set_login(cls, l):
         cls.login = l #l er en parameter
-
-class Model(object):
-    """This is the system model"""
-    current_user = None
-    class_list =  []
-
-    @classmethod
-    def set_current_user(cls, user):
-        cls.current_user = user
-    @classmethod
-    def get_current_user(cls):
-        return cls.current_user
 
 class Login_UniPlanner(QtWidgets.QMainWindow):
     """Class for Loginvinduet (set fra alles vinkel)
@@ -41,9 +30,15 @@ class Login_UniPlanner(QtWidgets.QMainWindow):
     #Def af de forskellige knapper og hvad der sker når man trykker på dem!
     #LOGIN KNAP
     def Login_knap_tryk(self):
+        Mail_felt = self.Mail_felt.text()
         print(self.Mail_felt.text())
+        Kodeord_felt = self.Kodeord_felt.text()
         print(self.Kodeord_felt.text())
-        print("Succesfuldt logget ind i: UniPlanner")
+        #verificer_bruger = Database_Connection.check_kordeord(Mail_felt, Kodeord_felt)
+        #if verificer_bruger == True:
+        #    print("Succesfuldt logget ind i: UniPlanner")
+        #else:
+        #    print("fejl")
 
         Login.set_login(True)
         self.close()
@@ -54,6 +49,6 @@ if __name__ == '__main__':
     window = Login_UniPlanner()
     app.exec()
     if Login.get_login() is True:
-        print("Videre til Hovedmenu")
+        print("Videre til Hovedmenuen for underviseren")
         vindue2 = Hovedmenu_UniPlanner()
         app.exec()

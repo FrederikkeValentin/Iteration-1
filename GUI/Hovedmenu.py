@@ -36,12 +36,6 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
         #Knappen for: Ændringer/skift af lokale
         self.Lokale_aendringer_skift.clicked.connect(self.Lokale_aendringer_skift_tryk)
 
-        #Knappen for: Næste uge af skemaet
-        self.NaesteUge.clicked.connect(self.NaesteUge_tryk)
-
-        #Knappen for: Forrige uge af skemaet
-        self.ForrigeUge.clicked.connect(self.ForrigeUge_tryk)
-
         #Knappen for: Log Ud af Uniplanner
         self.LogUd.clicked.connect(self.LogUd_tryk)
 
@@ -50,10 +44,8 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
 #Def af de forskellige knapper og hvad der sker når man trykker på dem!
     #DROPDOWN
     def dropdown(self, i):
-        print("Items in the list are :")
         for count in range(self.cb.count()):
                 print(self.cb.itemText(count))
-                print("Current index", i, "selection changed ", self.cb.currentText())
 
     #TILGÆNGELIGHED
     def Tilgaengelighed_tryk(self):
@@ -64,14 +56,6 @@ class Hovedmenu_UniPlanner(QtWidgets.QMainWindow):
         print("Videre til muligheder for ændringer eller skift af lokale, eventult fjernelse eller tilføjelse")
         self.lokale_skift = Lokaleaendringer_UniPlanner()
         self.lokale_skift.show()
-
-    # NÆSTE UGE
-    def NaesteUge_tryk(self):
-        print("Der vises næste uges skema")
-
-    #FORRIGE UGE
-    def ForrigeUge_tryk(self):
-        print("Der vises forrige uges skema")
 
     #LOG UD
     def LogUd_tryk(self):

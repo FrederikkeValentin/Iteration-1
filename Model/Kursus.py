@@ -1,6 +1,6 @@
 class Kursus:
     """Dette er en class for kursus"""
-    def __init__(self, kursusnavn: str, kursusID: int, ECTS: float, kursuskapacitet: int, varighed: str, kursusansvarlig: str, andre_undervisere: str, akademisk_grad: str, placering: str, udbydende_institut: str):
+    def __init__(self, kursusnavn: str, kursusID: int, ECTS: float, kursuskapacitet: int, varighed: str, kursusansvarlig: str, andre_undervisere: list, akademisk_grad: str, placering: str, udbydende_institut: str):
         self.__kursusnavn = kursusnavn
         self.__kursusID = kursusID
         self.__ECTS = ECTS
@@ -11,6 +11,8 @@ class Kursus:
         self.__akademisk_grad = akademisk_grad
         self.__placering = placering
         self.__udbydende_institut = udbydende_institut
+
+    ###Husk at lave en liste af andre_undervisere
 
     # Nedenstående er getters and setters
     def get_kursusnavn(self): return self.__kursusnavn

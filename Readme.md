@@ -1,7 +1,7 @@
-# Systemudvikling deliverable 1
-## Underoverskrift
+# Systemudviklings projekt
+## Natascha, Katrine, Cille & Frederikke
 
-*italic*  
+*Københavns Universitet*  
 
 ````python
 

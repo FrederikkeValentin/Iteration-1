@@ -6,5 +6,7 @@ class Login:
         self.__adgangskode = adgangskode
         self.__valider_bruger = valider_bruger
 
+
+
     def __str__(self):
-        return f"{self.__brugernavn}, {self.__adgangskode}", {self.valider_bruger}"
+        return f"{self.__brugernavn}, {self.__adgangskode}", {self.__valider_bruger}"
