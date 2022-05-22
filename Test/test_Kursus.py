@@ -1,6 +1,6 @@
 import Validator
 
-#def __init__(self, kursusnavn: str, kursusID: int, ECTS: float, kursuskapacitet: int, varighed: str, kursusansvarlig: str, andre_undervisere: str, akademisk_grad: str, placering: str, udbydende_institut: str):
+# def __init__(self, kursusnavn: str, kursusID: int, ECTS: float, kursuskapacitet: int, varighed: str, kursusansvarlig: str, andre_undervisere: str, akademisk_grad: str, placering: str, udbydende_institut: str):
 
 ## KURSUSNAVN
 def test_validate_kursusnavn_god():

@@ -1,6 +1,6 @@
 from PyQt6 import QtWidgets, uic
 import sys
-from Persistence import Database_Connection
+from Persistence import Database_Connection_MySQL
 from GUI.Hovedmenu import Hovedmenu_UniPlanner
 
 class Login(object):

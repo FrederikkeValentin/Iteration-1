@@ -1,6 +1,19 @@
 import Validator
+import pytest
+from Model.Sekretaer import Sekretaer
+#def __init__(self, fornavn: str, efternavn: str, email: str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: int):
 
-#def __init__(self, navn: str, email: str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: int):
+## TEST
+@pytest.fixture
+def Sekretær_Uniplanner():
+
+    return Sekretaer("Henning", "Jensen", "hej663@SUND.ku.dk", "Egebjerg 10, 4000 Roskilde", "100181-1968", "Sekretær for SUND", "hej663")
+
+def test_get_efternavn(Sekretær_Uniplanner):
+
+    assert Sekretær_Uniplanner.get_efternavn() == "Jensen"
+
+
 
 ## FORNAVN
 def test_validate_navn_god():
