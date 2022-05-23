@@ -1,13 +1,11 @@
 class Kursus:
     """Dette er en class for kursus"""
-    def __init__(self, kursusnavn: str, kursusID: int, ECTS: float, kursuskapacitet: int, varighed: str, kursusansvarlig: str, andre_undervisere: list, akademisk_grad: str, placering: str, udbydende_institut: str):
+    def __init__(self, kursusnavn: str, ECTS: float, kursuskapacitet: int, varighed: str, kursusansvarlig: str, akademisk_grad: str, placering: str, udbydende_institut: str):
         self.__kursusnavn = kursusnavn
-        self.__kursusID = kursusID
         self.__ECTS = ECTS
         self.__kursuskapacitet = kursuskapacitet
         self.__varighed = varighed
         self.__kursusansvarlig = kursusansvarlig
-        self.__andre_undervisere = andre_undervisere
         self.__akademisk_grad = akademisk_grad
         self.__placering = placering
         self.__udbydende_institut = udbydende_institut
@@ -32,9 +30,6 @@ class Kursus:
 
     def get_kursusansvarlig(self): return self.__kursusansvarlig
     def set_kursusansvarlig(self, ny_kursusansvarlig): self.__kursusansvarlig = ny_kursusansvarlig
-
-    def get_andre_undervisere(self): return self.__andre_undervisere
-    def set_andre_undervisere(self, nye_andre_undervisere): self.__andre_undervisere = nye_andre_undervisere
 
     def get_akademisk_grad(self): return self.__akademisk_grad
     def set_akademisk_grad(self, ny_akademisk_grad): self.__akademisk_grad = ny_akademisk_grad

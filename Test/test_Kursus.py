@@ -1,7 +1,17 @@
 import Validator
+from Model.Kursus import Kursus
 
-# def __init__(self, kursusnavn: str, kursusID: int, ECTS: float, kursuskapacitet: int, varighed: str, kursusansvarlig: str, andre_undervisere: str, akademisk_grad: str, placering: str, udbydende_institut: str):
+## TEST
+# def __init__(self, kursusnavn: str, ECTS: float, kursuskapacitet: int, varighed: str, kursusansvarlig: str, akademisk_grad: str, placering: str, udbydende_institut: str):
+Hent_kursus= Kursus("Humanbiologi", 10, 70, "1.semester", "Jens Christian", "Bachelor", "Efterår", "Biomedicinsk Institut")
 
+def test_get_kursusnavn():
+    test = Hent_kursus.get_kursusnavn() == "Humanbiologi"
+    assert test
+    print(test) #giver os true eller false
+
+
+#DETTE ER IKKE RELEVANT, DA VI IKKE HAR EN VALIDATOR
 ## KURSUSNAVN
 def test_validate_kursusnavn_god():
     assert Validator.validate_kursusnavn("Aud. Einer Lundsgaard") == True

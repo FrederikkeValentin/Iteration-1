@@ -1,7 +1,17 @@
 import Validator
+from Model.Underviser import Underviser
 
-#def __init__(self, navn: str, email:str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: int, kursus:str):
+## TEST
+#def __init__(self, fornavn: str, efternavn: str, email:str, adresse: str, cpr_nummer: str, titel: str, ansættelses_nr: str, kursus:str, login_uniplanner: str, se_skema: str, send_anmodning: str, indberette_tilgængelighed:str):
+Hent_underviser = Underviser("Lisbeth", "Lund", "lil789@SUND.ku.dk", "Almevej 7, 2900 Hellerup", "160580-1236", "Underviser påå SUND", "lil786", "Humanbiologi", "lil786", "Yes", "Yes", "Alle ugens dage")
 
+def test_get_ansættelses_nr():
+    test = Hent_underviser.get_ansættelses_nr() == "lil786"
+    assert test
+    print(test) #giver os true eller false
+
+
+#DETTE ER IKKE RELEVANT, DA VI IKKE HAR EN VALIDATOR
 ## FORNAVN
 def test_validate_navn_god():
     assert Validator.validate_navn("Lisbeth", 80) == True
