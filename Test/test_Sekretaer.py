@@ -12,6 +12,8 @@ def test_get_efternavn():
     print(test) #giver os true eller false
 
 
+
+#DETTE ER IKKE RELEVANT, DA VI IKKE HAR EN VALIDATOR
 ## FORNAVN
 def test_validate_navn_god():
     assert Validator.validate_navn("Henning",80) == True
