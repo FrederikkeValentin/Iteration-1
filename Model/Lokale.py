@@ -6,3 +6,6 @@ class Lokale:
         self.__kapacitet = kapacitet
         self.__ledighed = ledighed
 
+    list_ledige_lokaler = []
+
+
