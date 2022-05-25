@@ -41,6 +41,6 @@ class Sekretaer:
     def set_ansættelses_nr(self, nyt_ansættelses_nr): self.__email = nyt_ansættelses_nr
 
     def __str__(self):
-        return f"{self.__navn}, {self.__email}" \
+        return f"{self.__fornavn}, {self.__efternavn}, {self.__email}" \
                f", {self.__adresse}, {self.__cpr_nummer}, {self.__titel}," \
                f"{self.__login_uniplanner},{self.__se_skema},{self.__ansættelses_nr}"

@@ -64,7 +64,7 @@ class Underviser:
     def indberette_tilgængelighed(self, ny_indberettelse): self.__indberette_tilgængelighed = ny_indberettelse
 
     def __str__(self):
-        return f"{self.__navn}, {self.__cpr_nummer}" \
+        return f"{self.__fornavn}, {self.__efternavn}, {self.__cpr_nummer}" \
                f", {self.__adresse}, {self.__titel},{self.__ansættelses_nr}, " \
                f"{self.__kursus},{self.__login_uniplanner}, {self.__se_skema}, {self.__send_anmodning}, " \
                f"{self.__indberette_tilgængelighed}, age: {self.get_alder()} years"

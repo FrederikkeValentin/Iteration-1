@@ -8,4 +8,8 @@ class Lokale:
 
     list_ledige_lokaler = []
 
+    def __str__(self):
+        return f"{self.__adresse}, {self.__lokalenummer}" \
+               f", {self.__kapacitet}, {self.__ledighed}"
+
 
