@@ -2,7 +2,7 @@ from datetime import date
 from stdnum.dk import cpr
 
 #Private attribute
-class Underviser:
+class Studerende:
     """Dette er en class for underviser"""
     def __init__(self, fornavn: str, efternavn: str, email:str, adresse: str, cpr_nummer: str, studienummer: str, uddannelse: str, semester_el_blok: str, login_uniplanner: str, se_skema: str, modtag_notifikation: str):
         self.__fornavn = fornavn
