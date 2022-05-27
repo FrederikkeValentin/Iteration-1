@@ -19,10 +19,8 @@ def main():
         #object.erase()
 
     inter = LokaleReader().get_Lokale()
-    print(inter)
-    # print("Printing the new contents of the pharmacy")
+    print(inter)   # print("Printing the new contents of the pharmacy")
     # pharmacy.printout()
-
 
 if __name__ == '__main__':
     main()
