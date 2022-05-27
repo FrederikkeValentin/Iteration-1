@@ -3,31 +3,31 @@ from xml.etree.ElementTree import ElementTree, tostring
 import xml.etree.cElementTree as ET
 from xml.dom import minidom
 
-from Model import Lokale
+from Model.Lokale import Lokale
 
 
 class LokaleWriter:
-    def __init__(self, d: Lokale) -> None:
-        print("Writing root nodes")
+    def __init__(self, l: Lokale) -> None:
+
         self.__root__ = ET.Element("Lokale")
-        self.__root__.set("Adresse", d.getAdresse())
-        self.__root__.set("Lokalenr", d.getLokalenr())
-        self.__root__.set("Kapacitet", d.getKapacitet())
-        self.__stock__ = ET.SubElement(self.__root__, "Ledighed")
-        for Lokale in d.getLedighed():
-            ET.SubElement(self.__stock__, "Lokale", {'name': Lokale, 'quantity': str(d.get()[Lokale])})
-        print (tostring(self.__root__))
+        self.__root__.set("adresse", l.get_adresse())
+        self.__root__.set("lokalenummer", l.get_lokalenummer())
+        self.__root__.set("kapacitet", l.get_kapacitet())
+        self.__root__.set("ledighed", l.get_ledighed())
+
+        #self.__available__ = ET.SubElement(self.__root__, "Available")
+        #for course in l.getAvailable():
+        #    ET.SubElement(self.__available__, "course", {'name': course, 'room': str(l.getAvailable()[course])})
+        #    print(tostring(self.__root__))
+
     def save(self) -> None:
         tree = ET.ElementTree(self.__root__)
-        print (tree)
-        # prettyTree = prettify(tree)
-        # print (prettyTree)
-        tree.write("Lokale.xml")
+        tree.write("../XLM/lokaledata.xml")
+
 
 def prettify(elem):
-    """Return a pretty-printed XML string for the element.
-    """
+    """retunerer en pretty-printed XML string"""
     elem.getroot()
     rough_string = tostring(elem, 'utf-8')
-    reparsed = minidom.parseString(rough_string)
-    return reparsed.toprettyxml(indent="  ")
+    reparesed = minidom.parseString(rough_string)
+    return reparesed.topprettyxml(indent="  ")

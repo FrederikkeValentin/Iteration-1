@@ -1,30 +1,26 @@
 from logging import root
 import os
 from xml.etree import ElementTree
-from Model import Lokale
+from Model.Lokale import Lokale
 
 
-class DispensaryReader:
+class LokaleReader:
     __file_name__ = 'Lokale2.xml'
-    def __init__(self) -> None:
+
+    def __init__(self):
         full_file = os.path.abspath(os.path.join('data', self.__file_name__))
+        print(str(full_file))
         dom = ElementTree.parse(full_file)
 
-        #reading general attributes
         root = dom.getroot()
-        Adresse = root.attrib['Adresse']
-        Lokalenr = root.attrib['Lokalenr']
-        Kapacitet= root.attrib['Kapacitet']
-        Ledighed = {}
+        adresse = root.attrib['adresse']
+        lokalenummer = root.attrib['lokalenummer']
+        kapacitet = root.attrib['kapacitet']
+        ledighed = root.attrib['ledighed']
 
-        print ("Ny adresse i ", Adresse)
-        #getting all the drugs in stock
-        for Ledighed in root.iter('product'):
-            lokale_name = Lokale.attrib['lokalenummer']
-            print ("vurder ledighed", lokale_name)
-            lokale_ledighed = Lokale.attrib['Ledighed']
-            Lokale[lokale_ledighed]="JA"
-        self.__Lokale__ = Lokale(Adresse, Lokalenr, Kapacitet, Ledighed)
+        print("Nyt lokale i", lokalenummer)
 
-    def getDispensary(self) -> Lokale:
-        return self.__Dispensary__
+        self.__lecture__ = Lokale(adresse, lokalenummer, kapacitet, ledighed)
+
+    def get_Lokale(self) -> Lokale:
+        return self.__Lokale__
