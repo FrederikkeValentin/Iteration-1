@@ -22,7 +22,7 @@ class LokaleWriter:
 
     def save(self) -> None:
         tree = ET.ElementTree(self.__root__)
-        tree.write("../XLM/lokaledata.xml")
+        tree.write("../XML/data/lokaledata.xml")
 
 
 def prettify(elem):

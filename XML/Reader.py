@@ -3,9 +3,8 @@ import os
 from xml.etree import ElementTree
 from Model.Lokale import Lokale
 
-
 class LokaleReader:
-    __file_name__ = 'Lokale2.xml'
+    __file_name__ = 'lokaledata.xml'
 
     def __init__(self):
         full_file = os.path.abspath(os.path.join('data', self.__file_name__))
@@ -20,7 +19,7 @@ class LokaleReader:
 
         print("Nyt lokale i", lokalenummer)
 
-        self.__lecture__ = Lokale(adresse, lokalenummer, kapacitet, ledighed)
+        self.__Lokale__ = Lokale(adresse, lokalenummer, kapacitet, ledighed)
 
     def get_Lokale(self) -> Lokale:
         return self.__Lokale__
