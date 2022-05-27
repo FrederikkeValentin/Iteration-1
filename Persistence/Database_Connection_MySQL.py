@@ -7,7 +7,6 @@ class MySQL_connector:
     #OOP - link til hjemmeside hvor koden er fra
     #https://tutspack.com/crud-operation-in-python-with-mysql-using-oop/
 
-
     def __init__(self):
         global min_database, my_cursor
         min_database = mysql.connector.connect(
