@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor Sekretær as sekretær #white
+participant UniPlanner as uniplanner #white
+database Databaser as database #white
+actor "Studerende + TA" as studerende #white
+actor Underviser as underviser #white
+
+
+
+activate uniplanner
+activate sekretær
+uniplanner-->sekretær:Anmodning om lokaleskift til Aud. Niels K. Jerne
+sekretær->uniplanner:Tjek om lokale er ledigt
+
+uniplanner->database:Tjek lokaleledighed
+activate database
+alt ledigt lokale
+    database --> uniplanner: Aud. Niels K. Jerne LEDIGT
+    uniplanner-->sekretær: Aud. Niels K. Jerne LEDIGT
+    uniplanner <- sekretær: Lokaleændring godkendt
+
+    uniplanner->underviser: Notifikation om lokaleændring
+    activate underviser
+    uniplanner->studerende: Notifikation om lokaleændring
+    activate studerende
+
+
+else ikke ledigt lokale
+    database --> uniplanner: Aud. Niels K. Jerne IKKE LEDIGT
+    deactivate database
+    uniplanner --> sekretær: Aud. Niels K. Jerne IKKE LEDIGT
+    sekretær -> uniplanner: Lokaleændring afvist
+
+end
+deactivate sekretær
+@enduml

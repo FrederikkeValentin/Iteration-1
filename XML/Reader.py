@@ -12,6 +12,7 @@ class LokaleReader:
         dom = ElementTree.parse(full_file)
 
         root = dom.getroot()
+        id_lokale = root.attrib['id_lokale']
         adresse = root.attrib['adresse']
         lokalenummer = root.attrib['lokalenummer']
         kapacitet = root.attrib['kapacitet']
@@ -19,7 +20,7 @@ class LokaleReader:
 
         print("Nyt lokale i", lokalenummer)
 
-        self.__Lokale__ = Lokale(adresse, lokalenummer, kapacitet, ledighed)
+        self.__Lokale__ = Lokale(id_lokale, adresse, lokalenummer, kapacitet, ledighed)
 
     def get_Lokale(self) -> Lokale:
         return self.__Lokale__

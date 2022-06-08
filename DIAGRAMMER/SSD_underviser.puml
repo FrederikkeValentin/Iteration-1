@@ -1,0 +1,42 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor Underviser as underviser #white
+participant UniPlanner as uniplanner #white
+database Databaser as database #white
+actor Sekretær as sekretær #white
+
+
+activate uniplanner
+
+activate underviser
+
+underviser -> uniplanner: Tjekker ledige lokaler i uniplanner
+uniplanner->database: Anmoder om ledige lokaler
+activate database
+database -->uniplanner: Leverer liste over ledige lokaler
+uniplanner--> underviser: Viser liste over ledige lokaler
+underviser -> uniplanner: Anmod om lokaleskift til Aud. Niels K. Jerne
+uniplanner-->underviser: Anmodning er modtaget i systemet
+uniplanner -> sekretær: Send anmodning
+activate sekretær
+uniplanner <-- sekretær: Tjek om lokale er ledigt
+
+uniplanner->database:Tjek lokaleledighed
+
+alt ledigt lokale
+    database --> uniplanner: Aud. Niels K. Jerne LEDIGT
+    uniplanner->sekretær: Aud. Niels K. Jerne LEDIGT
+    uniplanner <-- sekretær: Godkend anmodning
+    uniplanner-->underviser: Notifikation om lokaleændring
+
+else ikke ledigt lokale
+    database --> uniplanner: Aud. Niels K. Jerne IKKE LEDIGT
+    deactivate database
+    uniplanner -> sekretær: Aud. Niels K. Jerne IKKE LEDIGT
+    sekretær --> uniplanner: Afvis anmodning
+    uniplanner-->underviser: Lokaleændring afvist
+
+end
+@enduml

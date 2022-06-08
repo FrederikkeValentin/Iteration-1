@@ -8,3 +8,4 @@ def test_get_studienummer():
     test = Hent_studerende.get_studienummer() == "emf876"
     assert test
     print(test) #giver os true eller false
+

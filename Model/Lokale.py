@@ -1,12 +1,15 @@
 class Lokale:
     """Dette er en class for lokale"""
-    def __init__(self, adresse: str, lokalenummer: str, kapacitet: int, ledighed: str):
+    def __init__(self, id_lokale: int, adresse: str, lokalenummer: str, kapacitet: int, ledighed: str):
+        self.__id_lokale = id_lokale
         self.__adresse = adresse
         self.__lokalenummer =lokalenummer
         self.__kapacitet = kapacitet
         self.__ledighed = ledighed
 
     list_ledige_lokaler = []
+    def get_id_lokale(self): return self.__id_lokale
+    def set_id_lokale(self, ny_id_lokale): self.__id_lokale = ny_id_lokale
 
     def get_adresse(self): return self.__adresse
     def set_adresse(self, nyt_adresse): self.__adresse = nyt_adresse

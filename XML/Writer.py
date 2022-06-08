@@ -10,6 +10,7 @@ class LokaleWriter:
     def __init__(self, l: Lokale) -> None:
 
         self.__root__ = ET.Element("Lokale")
+        self.__root__.set("id_lokale", l.get_id_lokale())
         self.__root__.set("adresse", l.get_adresse())
         self.__root__.set("lokalenummer", l.get_lokalenummer())
         self.__root__.set("kapacitet", l.get_kapacitet())

@@ -11,7 +11,7 @@ def main():
     Database_Lokale = Database_XML.my_cursor.fetchall()
     liste = []
     for item in Database_Lokale:
-        liste.append(Lokale(str(item[0]), str(item[1]), item[2], str(item[3])))
+        liste.append(Lokale(str(item[0]), str(item[1]), item[2], str(item[3]), str(item[4])))
 
     liste[0].get_lokalenummer()
     Lokale_Writer = LokaleWriter(liste[0])
