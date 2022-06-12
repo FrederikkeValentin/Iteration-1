@@ -21,7 +21,7 @@ class Lokaleaendringer_UniPlanner(QtWidgets.QMainWindow):
         print("Send anmodning [trykkes på]")
         self.close()
 
-        button = QtWidgets.QMessageBox.question(self, "Hurtig bemærkning:", "Bekræft at du vil sende en anmoding om lokaleskift" "Ved lang svartid, skal du sende en ny")
+        button = QtWidgets.QMessageBox.question(self, "Hurtig bemærkning:", "Bekræft at du vil sende en anmoding om lokaleskift. Ved lang svartid, skal du sende en ny.")
         if button == QtWidgets.QMessageBox.StandardButton.Yes:
             print("Yes, send anmodning!")
         else:

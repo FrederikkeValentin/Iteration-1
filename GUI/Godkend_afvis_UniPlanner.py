@@ -10,8 +10,15 @@ class Godkend_afvis_UniPlanner(QtWidgets.QMainWindow):
         super(Godkend_afvis_UniPlanner, self).__init__()
         uic.loadUi('../View/Godkend_afvis_UniPlanner.ui', self)
 
+        #Knappen for: GODKEND ÆNDRNG
         self.Godkend_aendring.clicked.connect(self.Godkend_aendring_tryk)
+
+        #Knappen for: AFVIS ÆNDRING
         self.Afvis_aendring.clicked.connect(self.Afvis_aendring_tryk)
+
+        #Knappen for: Log Ud af Uniplanner
+        self.LogUd.clicked.connect(self.LogUd_tryk)
+
         self.show()
 
     #Def af de forskellige knapper og hvad der sker når man trykker på dem!
@@ -22,12 +29,30 @@ class Godkend_afvis_UniPlanner(QtWidgets.QMainWindow):
               "i underviserens, TA's og de studerendes skema (notifikation om lokaleændringer sendes ud!).")
         self.close()
 
+        button = QtWidgets.QMessageBox.question(self, "Hurtig bemærkning:",
+                                                "Bekræft at du vil GODKENDE anmodingen om lokaleskift fra: Lisbeth Lund")
+        if button == QtWidgets.QMessageBox.StandardButton.Yes:
+            print("Yes, GODKEND anmodning!")
+        else:
+            print("Return")
+
     #AFVIS ÆNDRING
     def Afvis_aendring_tryk(self):
         print("Afvis: [trykkes på]")
         print("Anmodning fra underviseren AFVISES og skemaet forbliver det samme. "
               "Ny anmodning er nødvendig fra underviseren.")
         self.close()
+
+        button = QtWidgets.QMessageBox.question(self, "Hurtig bemærkning:",
+                                                "Bekræft at du vil AFVISE anmodingen om lokaleskift fra: Lisbeth Lund")
+        if button == QtWidgets.QMessageBox.StandardButton.Yes:
+            print("Yes, AFVIS anmodning!")
+        else:
+            print("Return")
+
+    #LOG UD
+    def LogUd_tryk(self):
+        self.close()  # Dette vil lukke det hele
 
 #Starter app-vinduet
 if __name__ == '__main__':
