@@ -4,7 +4,7 @@
 autonumber
 actor Underviser as underviser #white
 participant UniPlanner as uniplanner #white
-database Databaser as database #white
+database Database as database #white
 actor Sekretær as sekretær #white
 
 
