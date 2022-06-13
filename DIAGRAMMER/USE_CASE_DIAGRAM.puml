@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+@startuml
+left to right direction
+actor "Underviser" #white
+actor "Sekretær" #white
+actor "Studerende" #white
+actor "TA" #white
+rectangle UniPlanner {
+  usecase "Login" as UC1 #white
+  usecase "Godkend/afvis anmodning" as UC2 #white
+  usecase "Send notifikation om lokaleændring" as UC3 #white
+}
+
+Underviser ---> UC1
+Sekretær ---> UC2
+Studerende <---- UC3
+TA <--- UC3
+Underviser <---- UC3
+
+
+@enduml

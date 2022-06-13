@@ -1,0 +1,173 @@
+@startuml
+Person <|-- Studerende : nedarver
+Person <|-- Underviser : nedarver
+Person <|-- TA : nedarver
+Person <|-- Sekretær : nedarver
+Person <|-- Ansatte : nedarver
+Ansatte <|-- Sekretær : nedarver
+Ansatte <|-- Underviser : nedarver
+Ansatte <|-- TA
+Universitet "1 " *-- "1..* " Fakultet
+Fakultet "1..*  " -- "1..* " Uddannelse
+Uddannelse "1..*   " -- "   1..*" Kursus
+Person "0..*" -- "1..*" Universitet
+Underviser "1..*" -- "1..*  " Kursus
+Studerende "1..* " -- "1..*    " Kursus
+TA "0..* " -- "1..* " Kursus
+Sekretær "1..*" -- "1..*  " Universitet
+Lektion "1..*  " --* "1" Kursus
+Lektion "1..*  " -- "0..1" Lokale
+
+class Lektion #white {
+dato: Str
+tid: Str
+type: Str
+lokation: Str
+get_dato()
+set_dato()
+get_type()
+set_type()
+get_lektion()
+set_lektion()
+get_tid()
+set_tid()
+}
+
+class Person #white {
+Fornavn: Str
+Efternavn: Str
+Adresse: Str
+CPR-nummer: Int
+Email: Str
+get_fornavn()
+set_fornavn()
+get_efternavn()
+set_efternavn()
+get_adresse()
+set_adresse()
+get_CPRnummer()
+set_CPRnummer()
+get_Email()
+set_Email()
+login_uniplanner()
+se_skema()
+}
+
+class Ansatte #white {
+Ansættelsesnr: Str
+get_ansættelsesnr()
+set_ansættelsesnr()
+}
+
+class Studerende #white{
+Studienummer: Str
+Uddannelse: Str
+Semester/Blok: Str
+get_studienummer()
+set_studienummer()
+get_uddannelse()
+set_uddannelse()
+get_semester/blok()
+set_semester/blok()
+modtag_notifikation()
+}
+
+class Sekretær #white{
+Titel: Str
+get_titel()
+set_titel()
+godkend_anmodning()
+afvis_anmodning()
+}
+
+class Underviser #white{
+Kursus: Str
+Titel: Str
+get_kursus()
+set_kursus()
+get_titel()
+set_titel()
+send_anmodning()
+modtag_notifikation()
+indberette_tilgaengelighed()
+}
+
+class TA #white {
+Kursus: Str
+get_kursus()
+set_kursus()
+send_anmodning()
+modtag_notifikation()
+}
+
+class Kursus #white {
+KursusNavn: Str
+ECTS-point: Float
+Kursuskapacitet: Int
+Varighed: Str
+Kursusansvarlig: Str
+Akedemisk grad: Str
+Placering: Str
+Udbydende institut: Str
+get_kursusNavn()
+set_kursusNavn()
+get_ECTS-point()
+set_ECTS-point()
+get_kursuskapacitet()
+set_kursuskapacitet()
+get_varighed()
+set_varighed()
+get_kursusansvarlig()
+set_kursusansvarlig()
+get_akedemiskGrad()
+set_akademiskGrad()
+get_placering()
+set_placering()
+get_udbydendeInstitut()
+set_udbydendeInstitut()
+}
+
+class Universitet #white {
+Universitets_navn: Str
+get_universitet()
+set_universitet()
+}
+
+class Uddannelse #white {
+Navn: Str
+AkedemiskGrad: Str
+get_navn()
+set_navn()
+get_akademiskGrad()
+set_akademiskGrad()
+}
+
+class Fakultet #white {
+Navn: Str
+Adresse: Str
+Kontaktoplysninger: Str
+get_navn()
+set_navn()
+get_adresse()
+set_adresse()
+get_institut()
+set_institut()
+get_kontaktoplysninger()
+set_kontakteoplysninger()
+}
+
+class Lokale #white {
+Adresse: Str
+Lokalenummer: Str
+Kapacitet: Int
+Ledighed: Str
+set_adresse()
+get_adresse()
+set_lokalenummer()
+get_lokalenummer()
+set_kapacitet()
+get_kapacitet()
+set_ledighed()
+get_ledighed()
+}
+@enduml
